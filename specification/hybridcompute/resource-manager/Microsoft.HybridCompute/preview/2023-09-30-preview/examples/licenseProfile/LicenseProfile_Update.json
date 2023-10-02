@@ -4,11 +4,25 @@
     "resourceGroupName": "myResourceGroup",
     "machineName": "myMachine",
     "licenseProfileName": "default",
-    "api-version": "2023-06-20-preview",
+    "api-version": "2023-09-30-preview",
     "parameters": {
       "properties": {
         "esuProfile": {
           "assignedLicense": "{LicenseResourceId}"
+        },
+        "softwareAssurance": {
+          "softwareAssuranceStatus": "Enabled"
+        },
+        "products": {
+          "windowsServerProfile": {
+            "subscriptionStatus": "Enable",
+            "productFeatures": [
+              {
+                "name": "HotPatching",
+                "subscriptionStatus": "Enable"
+              }
+            ]
+          }
         }
       }
     }
@@ -36,6 +50,24 @@
                 "licenseStatus": "licenseStatus2"
               }
             ]
+          },
+          "softwareAssurance": {
+            "softwareAssuranceStatus": "Enabled"
+          },
+          "products": {
+            "windowsServerProfile": {
+              "subscriptionStatus": "Enabling",
+              "billingStartDate": "2022-01-01-08:00",
+              "disenrollmentDate": "2022-02-01-08:00",
+              "productFeatures": [
+                {
+                  "name": "HotPatching",
+                  "subscriptionStatus": "Enabling",
+                  "billingStartDate": "2022-01-01-08:00",
+                  "disenrollmentDate": "2022-02-01-08:00"
+                }
+              ]
+            }
           }
         }
       }

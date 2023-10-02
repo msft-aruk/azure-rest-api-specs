@@ -4,12 +4,26 @@
     "resourceGroupName": "myResourceGroup",
     "machineName": "myMachine",
     "licenseProfileName": "default",
-    "api-version": "2023-06-20-preview",
+    "api-version": "2023-09-30-preview",
     "parameters": {
       "location": "eastus2euap",
       "properties": {
+        "softwareAssurance": {
+          "softwareAssuranceStatus": "Enabled"
+        },
         "esuProfile": {
           "assignedLicense": "{LicenseResourceId}"
+        },
+        "products": {
+          "windowsServerProfile": {
+            "subscriptionStatus": "Enabled",
+            "productFeatures": [
+              {
+                "name": "HotPatching",
+                "subscriptionStatus": "Enabled"
+              }
+            ]
+          }
         }
       }
     }
@@ -23,6 +37,9 @@
         "location": "eastus2euap",
         "tags": null,
         "properties": {
+          "softwareAssurance": {
+            "softwareAssuranceStatus": "Enabled"
+          },
           "esuProfile": {
             "assignedLicense": "{LicenseResourceId}",
             "assignedLicenseImmutableId": "{Guid}",
@@ -39,6 +56,21 @@
                 "licenseStatus": "licenseStatus2"
               }
             ]
+          },
+          "products": {
+            "windowsServerProfile": {
+              "subscriptionStatus": "Enabled",
+              "billingStartDate": "2022-01-01-08:00",
+              "disenrollmentDate": "2022-02-01-08:00",
+              "productFeatures": [
+                {
+                  "name": "HotPatching",
+                  "subscriptionStatus": "Enabled",
+                  "billingStartDate": "2022-01-01-08:00",
+                  "disenrollmentDate": "2022-02-01-08:00"
+                }
+              ]
+            }
           }
         }
       }
@@ -55,6 +87,9 @@
         "type": "Microsoft.HybridCompute/machines/licenseProfiles",
         "location": "eastus2euap",
         "properties": {
+          "softwareAssurance": {
+            "softwareAssuranceStatus": "Enabled"
+          },
           "esuProfile": {
             "assignedLicense": "{LicenseResourceId}",
             "esuEligibility": "Eligible",
@@ -70,6 +105,21 @@
                 "licenseStatus": "licenseStatus2"
               }
             ]
+          },
+          "products": {
+            "windowsServerProfile": {
+              "subscriptionStatus": "Enabled",
+              "billingStartDate": "2022-01-01-08:00",
+              "disenrollmentDate": "2022-02-01-08:00",
+              "productFeatures": [
+                {
+                  "name": "HotPatching",
+                  "subscriptionStatus": "Enabled",
+                  "billingStartDate": "2022-01-01-08:00",
+                  "disenrollmentDate": "2022-02-01-08:00"
+                }
+              ]
+            }
           }
         }
       }

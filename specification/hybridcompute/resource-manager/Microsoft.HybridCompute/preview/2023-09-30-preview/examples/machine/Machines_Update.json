@@ -3,7 +3,7 @@
     "subscriptionId": "{subscription-id}",
     "resourceGroupName": "myResourceGroup",
     "machineName": "myMachine",
-    "api-version": "2023-06-20-preview",
+    "api-version": "2023-09-30-preview",
     "location": "eastus2euap",
     "kind": null,
     "parameters": {
@@ -78,6 +78,13 @@
             }
           },
           "licenseProfile": {
+            "licenseStatus": "UnKnown",
+            "licenseChannel": "PSG",
+            "osEdition": "Standard",
+            "machineType": "UnKnown",
+            "softwareAssurance": {
+              "softwareAssuranceStatus": "Enabled"
+            },
             "esuProfile": {
               "licenseAssignmentState": "Assigned",
               "esuEligibility": "Ineligible",
@@ -93,6 +100,21 @@
                   "licenseStatus": "licenseStatus2"
                 }
               ]
+            },
+            "products": {
+              "windowsServerProfile": {
+                "subscriptionStatus": "Enabled",
+                "billingStartDate": "2022-01-01-08:00",
+                "disenrollmentDate": "2022-02-01-08:00",
+                "productFeatures": [
+                  {
+                    "name": "HotPatching",
+                    "subscriptionStatus": "Enabled",
+                    "billingStartDate": "2022-01-01-08:00",
+                    "disenrollmentDate": "2022-02-01-08:00"
+                  }
+                ]
+              }
             }
           },
           "vmId": "b7a098cc-b0b8-46e8-a205-62f301a62a8f",
