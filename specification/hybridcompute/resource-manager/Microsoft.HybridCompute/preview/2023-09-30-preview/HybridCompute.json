@@ -2408,6 +2408,15 @@
           "type": "string",
           "description": "Specifies the Operating System product SKU."
         },
+        "osEdition": {
+          "readOnly": true,
+          "type": "string",
+          "description": "The edition of the Operating System."
+        },
+        "machineType": {
+          "$ref": "#/definitions/MachineType",
+          "description": "The machine type."
+        },
         "domainName": {
           "readOnly": true,
           "type": "string",
@@ -3097,15 +3106,6 @@
           "readOnly": true,
           "type": "string",
           "description": "Indicates the license channel."
-        },
-        "osEdition": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The edition of the OS."
-        },
-        "machineType": {
-          "$ref": "#/definitions/MachineType",
-          "description": "The machine type."
         },
         "softwareAssurance": {
           "x-ms-client-flatten": true,
